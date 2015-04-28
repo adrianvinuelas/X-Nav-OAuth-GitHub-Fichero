@@ -1,0 +1,36 @@
+<!doctype html>
+
+<!--
+    Simple demo of GitHub git API
+-->
+
+<html lang="us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos of GitHub API</title>
+<!--    <link href="simple.css" rel="stylesheet"> -->
+    <script src="jQuery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="hello.all.min.js"></script>
+    <script src="github.js"></script>
+    <script src="git.js"></script>
+  </head>
+  <body>
+
+    <div id="form">
+      <div id="repoform"/>
+      </div>
+      <div id="contenidorepo"/>
+      </div>
+       <div id="inforepo"/>
+      </div>
+      <div id="escritura">
+          Fichero: <input type="text" name="write" value="" id="fich" size="10" />
+          Contenido:  <textarea name='content' id='conte' rows='4' cols='40'>Some content</textarea>
+          <button type="button" id="botonwrite">Write File</button>
+          <button type="button" id="botonread">Read File</button>
+          <div id="hecho"></div>
+      </div>   
+  </body>
+</html>

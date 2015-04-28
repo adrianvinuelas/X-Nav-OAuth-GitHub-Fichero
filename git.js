@@ -28,14 +28,14 @@ function obtenerRepo(){
 	var username = $("#user").val();
 	var reponame = $("#repo").val();
 	repo = github.getRepo(username, reponame);
-	repo.show(function(err, repo) {
+	repo.show(function(err, repo1) {
 		if (err) {
 			$("#inforepo").html("<p>Error code: " + err.error + "</p>");
 		} else {
 			var info = "<p>Info del repositorio:</p>" +
-				   "<ul><li>Nombre: " + repo.full_name + "</li>" +
-				   "<li>Descripcion: " + repo.description + "</li>" +
-				   "<li>Creado: " + repo.created_at + "</li></ul>"
+				   "<ul><li>Nombre: " + repo1.full_name + "</li>" +
+				   "<li>Descripcion: " + repo1.description + "</li>" +
+				   "<li>Creado: " + repo1.created_at + "</li></ul>"
 			$("#inforepo").html(info);
 			repo.contents('master', '', showFiles);
 			$("#escritura").show();

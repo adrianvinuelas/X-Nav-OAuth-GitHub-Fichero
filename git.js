@@ -6,6 +6,7 @@ var repoHTML = "User: <input type='text' name='user' value='adrianvinuelas'" +
     "<div id='repodata'/>";
 
 var github;
+var repo;
 
 function showFiles(error, contents) {
     if (error) {
@@ -63,8 +64,8 @@ jQuery(document).ready(function() {
 
 	hello.init({
 		github : "2fd3956542947f2cd70e" //poner el identificador de mi aplicacion
-	    },{
-		redirect_uri : 'redirect.html',
+	},{
+		redirect_uri : "redirect.html",
 		oauth_proxy : "https://auth-server.herokuapp.com/proxy",
 		scope : "publish_files",
 	});

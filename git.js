@@ -39,6 +39,7 @@ function obtenerRepo(){
 			$("#inforepo").html(info);
 			repo.contents('master', '', showFiles);
 			$("#escritura").show();
+			$("#conte").val("Escribe aquí");
 			$("#botonwrite").click(escribirenrepo);
 			$("#botonread").click(readrepo);
 		}
@@ -61,7 +62,6 @@ function readrepo(){
 jQuery(document).ready(function() {
 	$("#escritura").hide();
 	$("#botontoken").click(obtenerRepo);
-	$("conte").val("Escribe aquí")
 	hello.init({
 		github : "2fd3956542947f2cd70e" //poner el identificador de mi aplicacion
 	},{

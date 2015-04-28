@@ -61,7 +61,7 @@ function readrepo(){
 jQuery(document).ready(function() {
 	$("#escritura").hide();
 	$("#botontoken").click(obtenerRepo);
-
+	$("conte").val("Escribe aquí")
 	hello.init({
 		github : "2fd3956542947f2cd70e" //poner el identificador de mi aplicacion
 	},{

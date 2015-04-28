@@ -10,13 +10,13 @@ var repo;
 
 function showFiles(error, contents) {
     if (error) {
-		("#contenidorepo").html("<p>Error code: " + error.error + "</p>");
+		$("#contenidorepo").html("<p>Error code: " + error.error + "</p>");
     } else {
 		var files = [];
 		for (var i = 0, len = contents.length; i < len; i++) {
 		    files.push(contents[i].name);
 		};
-		("#contenidorepo").html("<p>Files:</p>" +
+		$("#contenidorepo").html("<p>Files:</p>" +
 				  "<ul id='files'><li>" +
 				  files.join("</li><li>") +
 				  "</li></ul>"

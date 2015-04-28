@@ -65,12 +65,16 @@ jQuery(document).ready(function() {
 		github : "2fd3956542947f2cd70e" //poner el identificador de mi aplicacion
 	    },{
 		redirect_uri : 'redirect.html',
-		oauth_proxy : "https://auth-server.herokuapp.com/proxy"
+		oauth_proxy : "https://auth-server.herokuapp.com/proxy",
+		scope : "publish_files",
 	});
-
+	console.log ("llego hasta aqui");
 	access = hello("github");
+	console.log ("llego hasta aqui 1111111");
   	access.login({response_type: 'code'}).then( function(){
+  		console.log ("llego hasta aqui 222222");
 		auth = hello("github").getAuthResponse();
+		console.log ("llego hasta aqui 3333333");
 		token = auth.access_token; //cojo el token de acceso a la aplicacion
 		console.log (token);
 		github = new Github({

@@ -54,7 +54,7 @@ function escribirenrepo(){
 function readrepo(){
 	console.log("voy a leer de = " + $("#fich").val());
 	repo.read('master', $("#fich").val(), function(err, data) {
-		$("#conte").html(data);
+		$("#conte").val(data);
 	});
 }
 
